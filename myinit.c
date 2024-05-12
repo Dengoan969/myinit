@@ -182,7 +182,7 @@ struct TaskArray * readConfig(FILE * out, char * configurationFilename) {
   size_t len = 0;
   while (getline( & line, & len, configuration) != -1) {
 
-    fprintf(out, "line from config: '%s'\n", line);
+    fprintf(out, "line from config: '%s'", line);
     struct Task * t = createTask();
     getLineArgs(line, & t -> arguments, & t -> argsLen);
 
